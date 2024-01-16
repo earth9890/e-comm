@@ -71,36 +71,44 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "Product Name", "p
 
 
 Backend 
-```http
-   https://backend-uniblox.onrender.com"
-```
+
+
+   https://backend-uniblox.onrender.com
+
+
 #### Get all items
-```http
-  GET https://backend-uniblox.onrender.com/products/get-products
-```
-```http
-  POST https://backend-uniblox.onrender.com/products/add-product"
-```
 
-Send data using above to add product
 
-{"name": "Product Name", "price": 1000}
+  GET     https://backend-uniblox.onrender.com/products/get-products
+
+
+  POST    https://backend-uniblox.onrender.com/products/add-product
+
+
+
+    Send data using above to add product
+
+        {
+            "name": "Product Name", 
+            "price": 1000
+        }
 
 ### To Checkout 
 
-```http
-  POST https://backend-uniblox.onrender.com/checkout
-```
-Send data using above to add checkout 
+ 
+  POST     https://backend-uniblox.onrender.com/checkout
 
-  "username": "john_doe",
-  "cartItems": [
-    {
-      "productId": "65a64f7b2a8c25a546c6d4be",
-      "quantity": 2
-    }
-  ]
-}'
+
+            Send data using above to add checkout 
+            
+              "username": "john_doe",
+              "cartItems": [
+                {
+                  "productId": "65a64f7b2a8c25a546c6d4be",
+                  "quantity": 2
+                }
+              ]
+            }'
 
 
 
