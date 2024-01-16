@@ -21,9 +21,8 @@ app.use(express.static("public"));
 
 // Routes
 app.get("/", (req, res) => {
-
   res.send({
-    "message" : "Hello HomePage"
+    message: "Hello HomePage",
   });
 });
 app.use(checkoutRoutes);
