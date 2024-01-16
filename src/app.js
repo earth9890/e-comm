@@ -27,6 +27,8 @@ app.get("/", (req, res) => {
 });
 app.use(checkoutRoutes);
 app.use("/products", productRoutes);
+// app.use("/", productRoutes);
+
 app.use(admincouponRoute);
 
 // app.get("get", (req, res) => {

@@ -25,4 +25,18 @@ router.post("/add-product", async (req, res) => {
   }
 });
 
+
+router.get("/get-products", async (req, res) => {
+  try {
+    // Retrieve all products from the database
+    const products = await Product.find();
+
+     res.status(200).json({ products, formatted: true });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+
 export default router;
