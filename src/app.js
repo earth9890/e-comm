@@ -10,7 +10,6 @@ const app = express();
 // Cors
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN,
     credentials: true,
   })
 );
@@ -21,6 +20,12 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 
 // Routes
+app.get("/", (req, res) => {
+
+  res.send({
+    "message" : "Hello HomePage"
+  });
+});
 app.use(checkoutRoutes);
 app.use("/products", productRoutes);
 app.use(admincouponRoute);
