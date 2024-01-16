@@ -6,7 +6,7 @@ Install my-project with npm
 
 Clone the repo
 ```bash
-git clone https://github.com/earth9890/e-comm.git
+git clone https://github.com/earth9890/e-comm.git 
 ```
 
 
